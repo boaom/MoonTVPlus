@@ -134,7 +134,13 @@ jobs:
           append_var "KVROCKS_URL" "${{ secrets.KVROCKS_URL }}"
           append_var "INIT_CONFIG" "${{ secrets.INIT_CONFIG }}"
           append_var "CONFIG_SUBSCRIPTION_URL" "${{ secrets.CONFIG_SUBSCRIPTION_URL }}"
-
+          append_var ENABLE_TVBOX_SUBSCRIBE "${{ secrets.ENABLE_TVBOX_SUBSCRIBE }}"
+          append_var TVBOX_SUBSCRIBE_TOKEN "${{ secrets.TVBOX_SUBSCRIBE_TOKEN }}"
+          append_var WATCH_ROOM_ENABLED "${{ secrets.WATCH_ROOM_ENABLED }}"
+          append_var WATCH_ROOM_EXTERNAL_SERVER_AUTH "${{ secrets.WATCH_ROOM_EXTERNAL_SERVER_AUTH }}"
+          append_var WATCH_ROOM_EXTERNAL_SERVER_URL "${{ secrets.WATCH_ROOM_EXTERNAL_SERVER_URL }}"
+          append_var WATCH_ROOM_SERVER_TYPE "${{ secrets.WATCH_ROOM_SERVER_TYPE }}"
+          
           echo "Updated wrangler.toml:"
           cat wrangler.toml
 
